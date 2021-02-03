@@ -1,0 +1,74 @@
+:host{
+  .navigation-container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color:#f1b9c5;
+
+    .content-container{
+      width: 60%;
+      height: 100%;
+      margin-left: 20%;
+      display: flex;
+      justify-content: space-between;
+
+      .left-content{
+        display: flex;
+        align-items: center;
+
+        *{
+          margin: 0 10px 0 0;
+          cursor: pointer;
+          color: white;
+
+          &.active-link{
+            text-decoration: underline;
+            font-weight: 800;
+          }
+
+          &.brand-name{
+            margin-bottom: 3px;
+            font-size: 30px;
+          }
+        }
+      }
+
+      .login-container{
+        display: flex;
+        align-items: center;
+
+        .input-container{
+          width: 150px;
+
+          &.password-container{
+            position: relative;
+
+            input{
+              padding-right: 37px;
+            }
+            img{
+              position: absolute;
+              right: 3px;
+              top: 7px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        *{
+          margin-right: 5px;
+        }
+      }
+
+      .logged-in-container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+  }
+
+
+}

@@ -1,0 +1,39 @@
+@import "~@angular/material/theming";
+@import "./custom-pallettes";
+@include mat-core();
+
+$material-primary:mat-palette($mat-primary);
+$material-accent:mat-palette($mat-secondary);
+$material-warn:mat-palette($mat-warn);
+
+$custom-typography:mat-typography-config(
+  $font-family:   'Roboto, "Helvetica Neue", sans-serif',
+    // Large, one-off header, usually at the top of the page (e.g. a hero header).
+  $display-4:     mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+    // Large, one-off header, usually at the top of the page (e.g. a hero header).
+  $display-3:     mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+    // Large, one-off header, usually at the top of the page (e.g. a hero header).
+  $display-2:     mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+    // Large, one-off header, usually at the top of the page (e.g. a hero header).
+  $display-1:     mat-typography-level(48px, 40px, 400),
+    // Section heading corresponding to the <h1> tag.
+  $headline:      mat-typography-level(36px, 32px, 400),
+    // Section heading corresponding to the <h2> tag.
+  $title:         mat-typography-level(24px, 32px, 500),
+    // Section heading corresponding to the <h3> tag.
+  $subheading-2:  mat-typography-level(21px, 28px, 400),
+    // Section heading corresponding to the <h4> tag.
+  $subheading-1:  mat-typography-level(15px, 24px, 400),
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+$app-theme:mat-light-theme((
+  color:(
+    primary:$material-primary,
+    accent:$material-accent,
+    warn:$material-primary
+  )
+));
+
+@include mat-base-typography($custom-typography);
+@include angular-material-theme($app-theme);

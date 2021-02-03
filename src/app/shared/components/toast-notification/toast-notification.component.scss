@@ -1,0 +1,29 @@
+.toast-container{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  padding: 20px 30px 20px 20px;
+  height: 80px;
+  min-width: 300px;
+  max-width: 450px;
+  border-radius: 5px;
+}
+
+p{
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.success-toast{
+  background-color: #f7d6dd;
+  border-left:10px solid #fe6788;
+}
+
+.error-toast{
+  background-color: #5f5f5f;
+  border-left: 10px solid black;
+}

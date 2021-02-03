@@ -1,0 +1,26 @@
+<div class="navigation-container">
+  <div class="content-container">
+    <div class="left-content">
+      <a class="brand-name" routerLinkActive="active-link" [routerLink]="['/home']">Dating App</a>
+      <a *ngIf="currentUser" routerLinkActive="active-link" [routerLink]="['/members']">Matches</a>
+      <a *ngIf="currentUser" routerLinkActive="active-link" [routerLink]="['/lists']">Lists</a>
+      <a *ngIf="currentUser" routerLinkActive="active-link" [routerLink]="['/messages']" >Messages</a>
+      <a *ngIf="currentUser"  (click)="onLogoutClick()">Logout</a>
+    </div>
+    <div class="login-container" [formGroup]="formGroup" *ngIf="!currentUser">
+      <div class="input-container">
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" formControlName="username">
+      </div>
+      <div class="password-container input-container">
+        <input #passwordInput type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"formControlName="password">
+        <img [src]="isPasswordVisible?'assets/icons/open-eyes.svg':'assets/icons/closed-eyes.svg'" (click)="toggleVisibility()">
+      </div>
+      <button mat-raised-button color="primary" (click)="onSubmitClick()">Login</button>
+
+    </div>
+
+    <div class="logged-in-container" *ngIf="currentUser">
+      <app-generic-dropdown></app-generic-dropdown>
+    </div>
+  </div>
+</div>

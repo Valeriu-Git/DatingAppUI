@@ -1,0 +1,28 @@
+:host{
+  .content-container{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 170px;
+
+    .buttons-container{
+      width: 200px;
+      display: flex;
+      justify-content: space-between;
+      .custom-btn{
+        border: 0;
+        padding: 6px 15px;
+        color: white;
+        border-radius: 5px;
+        &.btn-blue{
+          background-color: #2a7dfe;
+        }
+        &.btn-light-blue{
+          background-color: #4499b9;
+        }
+      }
+    }
+  }
+}

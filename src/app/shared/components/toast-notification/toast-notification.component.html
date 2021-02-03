@@ -1,0 +1,9 @@
+<div class="toast-container"
+     [@toastState]="'_'"
+     [ngClass]="{'success-toast':typeOfToast===typeOfToastEnum.Success,
+             'error-toast':typeOfToast===typeOfToastEnum.Error}"
+     *ngIf="isVisible"
+  >
+  <img [src]="typeOfToast===typeOfToastEnum.Success?'assets/icons/success-heart-icon.svg':'assets/icons/broken-heart-icon.svg'">
+  <p [ngStyle]="{'color':typeOfToast===typeOfToastEnum.Success? '#fe6788':'black'}"> {{message}}</p>
+</div>

@@ -1,0 +1,6 @@
+<div class="heart-container" [@loadingTrigger]="" *ngIf="isVisible">
+  <img src="../../../../assets/icons/heart-icon.svg">
+  <div class="loading-circles-container">
+    <div class="circle" *ngFor="let _ of [].constructor(3);let i=index" [ngClass]="{'loading':i===index}"></div>
+  </div>
+</div>

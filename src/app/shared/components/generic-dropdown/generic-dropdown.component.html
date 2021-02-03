@@ -1,0 +1,12 @@
+<div class="dropdown-container" (click)="onDropdownClick()" appClickOutside [cssSelector]="'.dropdown-container,.dropdown-container *'"  (clickOutside)="onClickOutside()">
+  <p>Welcome {{username}}</p>
+  <div class="triangle"></div>
+  <div class="dropdown-options"  >
+    <ng-container *ngIf="isDropdownOpen">
+      <div class="option" *ngFor="let option of dropdownOptions;let i=index" [@dropdownOptions]="i%2===0?'evenOption':'oddOption'" (click)="onOptionClick(option)">
+        <span>{{option}}</span>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
